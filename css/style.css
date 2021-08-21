@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  color: #6a6f8c;
+  background: #c8c8c8;
+  border-radius: 50px;
+  
+  
+}
+.card-body
+{
+  width: 100%;
+    margin: auto;
+    max-width: 525px;
+    min-height: 670px;
+    position: relative;
+    background: url(https://images.unsplash.com/photo-1507208773393-40d9fc670acf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1268&q=80) no-repeat center;
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19);
+    
+}
+.card-body.navbar {
+  width: 100%;
+  padding: 1% 0;
+  font-size: 1.2em;
+}
+.navbar-brand {
+  padding: 0 15px 5px;
+}
+.navbar-default .navbar.nav li a{
+  color: #2a2828;
+}
+.card-body.row{
+  top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    transition: all .4s linear
+}
+

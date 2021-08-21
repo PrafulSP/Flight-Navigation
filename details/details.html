@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <script type="text/javascript" src="test1.js"></script>
+  <title>Details</title>
+</head>
+<style></style>
+  <body>
+    <div class ="container">
+      <div class ="row justify-content-center align-items-center">
+        <div class ="col-lg-6">
+          <form name="frm" action="../CPage/page.html" onsubmit="return  validate()" class="p-4 border rounded bg-light" style="margin-top: 2%; font-size: 
+          1.5em;">
+          <h1 style="color: rgb(36, 36, 36); text-align: center;">Enter Details</h1>
+          <div class="form-group">
+            <label class="text-black" required>Name:</label>
+            <input type="text" name="name" class="form-control"
+            placeholder="Enter Your Name----">
+          </div>
+          <div class="form-group">
+            <label class="text-black">Email:</label>
+            <input type="email" name="email" class="form-control"
+            placeholder="Enter Your Email----">
+          </div>
+
+
+          <div class="form-group">
+            <label class="text-black">Gender:</label>
+            <select class="form-control" name="gender">
+              <option disabled="" selected="">--gender--</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+          </div>
+
+
+          <div class="form-group">
+            <label class="text-black">Number:</label>
+            <input type="number" name="number" class="form-control"
+            placeholder="Enter Your Number----">
+          </div>
+          <div class="form-group">
+            <label class ="text-black">Address:</label>
+            <textarea name="address" class="form-control"
+            placeholder="Enter Your Address----"></textarea>
+          </div>
+          <div class="form-group">
+            <label class ="text-black">City:</label>
+            <select class="form-control" name="city">
+              <option disabled="" selected="">---Select city---</option>
+              <option value="Ernakulam">Ernakulam</option>
+              <option value="Trivanduram">Trivanduram</option>
+              <option value="Kannur">Kannur</option>  
+              <option value="Others">Others</option>         
+            </select>
+          </div>
+          <br>
+          <div class="form-group">
+            <input type="submit" name="submit" value="Registerted Yourself.."
+            class="form-control btn btn-lg bg-danger text-white">
+
+          </div>
+
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

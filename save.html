@@ -1,0 +1,702 @@
+console.log('hey da')
+const a = new Date();
+console.log(a);
+
+if(form)
+{
+    form.addEventListener("submit" , (event) => {
+        event.preventDefault();
+        validate();
+    })
+}
+const form = document.getElementById("form");
+const errorElement = document.getElementById("error");
+
+const selectfrom = document.getElementById("selectfrom");
+const selectto = document.getElementById("selectto");
+const dateDep = document.getElementById("Departing");
+const dateArr = document.getElementById("arriving");
+const kids = document.getElementById("kids");
+const adults = document.getElementById("adults");
+const seniors = document.getElementById("seniors");
+const d = new Date();
+console.log(selectto,selectto);
+
+
+const validate = () => {
+    if (selectfrom.value == '' || selectto.value == '')
+    {  return false;
+      alert('Please select To or From city');
+     
+    } else if(dateArr.value>dateDep.value || dateArr.value>=d.value || dateArr.value>=d.value)
+    {   return false;
+        alert('Invalid date');
+    } 
+    
+}
+
+
+
+details.js content 
+
+
+console.log("hello");
+$(document).ready(function() {
+    $('#contact_form').bootstrapValidator({
+        // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
+        feedbackIcons: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            first_name: {
+                validators: {
+                        stringLength: {
+                        min: 2,
+                    },
+                        notEmpty: {
+                        message: 'Please supply your first name'
+                    }
+                }
+            },
+             last_name: {
+                validators: {
+                     stringLength: {
+                        min: 2,
+                    },
+                    notEmpty: {
+                        message: 'Please supply your last name'
+                    }
+                }
+            },
+            email: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please supply your email address'
+                    },
+                    emailAddress: {
+                        message: 'Please supply a valid email address'
+                    }
+                }
+            },
+            phone: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please supply your phone number'
+                    },
+                    phone: {
+                        country: 'US',
+                        message: 'Please supply a vaild phone number with area code'
+                    }
+                }
+            },
+            address: {
+                validators: {
+                     stringLength: {
+                        min: 8,
+                    },
+                    notEmpty: {
+                        message: 'Please supply your street address'
+                    }
+                }
+            },
+            city: {
+                validators: {
+                     stringLength: {
+                        min: 4,
+                    },
+                    notEmpty: {
+                        message: 'Please supply your city'
+                    }
+                }
+            },
+            state: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please select your state'
+                    }
+                }
+            },
+            zip: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please supply your zip code'
+                    },
+                    zipCode: {
+                        country: 'US',
+                        message: 'Please supply a vaild zip code'
+                    }
+                }
+            },
+            comment: {
+                validators: {
+                      stringLength: {
+                        min: 10,
+                        max: 200,
+                        message:'Please enter at least 10 characters and no more than 200'
+                    },
+                    notEmpty: {
+                        message: 'Please supply a description of your project'
+                    }
+                    }
+                }
+            }
+        })
+        .on('success.form.bv', function(e) {
+            $('#success_message').slideDown({ opacity: "show" }, "slow") // Do something ...
+                $('#contact_form').data('bootstrapValidator').resetForm();
+
+            // Prevent form submission
+            e.preventDefault();
+
+            // Get the form instance
+            var $form = $(e.target);
+
+            // Get the BootstrapValidator instance
+            var bv = $form.data('bootstrapValidator');
+
+            // Use Ajax to submit form data
+            $.post($form.attr('action'), $form.serialize(), function(result) {
+                console.log(result);
+            }, 'json');
+        });
+});
+
+main js
+
+
+
+
+
+
+console.log('hello')
+const a = new Date();
+console.log(a);
+   function formValidation()
+   {
+                if(form)
+                {
+                    form.addEventListener("submit" , (event) => {
+                        event.preventDefault();
+                        validate();
+                    })
+                }
+                const form = document.getElementById("form");
+                const errorElement = document.getElementById("error");
+
+                const selectfrom = document.form.getElementById("selectfrom");
+                const selectto = document.form.getElementById("selectto");
+                const dateDep = document.form.getElementById("Departing");
+                const dateArr = document.form.getElementById("arriving");
+                const kids = document.form.getElementById("kids");
+                const adults = document.form.getElementById("adults");
+                const seniors = document.form.getElementById("seniors");
+                const d = new Date();
+                console.log(selectto,selectto);
+
+
+                const validate = () => {
+                    if (selectfrom.value == '' || selectto.value == '')
+                    {  return false;
+                    alert('Please select To or From city');
+                    
+                    } else if(dateArr.value>dateDep.value || dateArr.value>=d.value || dateArr.value>=d.value)
+                    {   return false;
+                        alert('Invalid date');
+                    } else (kids.value == '' || adults.value == '' || seniors.value == '')
+                    {   return false;
+                        alert('Select values for kids,adults,seniors');
+                    }
+                    
+                }
+            }
+
+
+main.js last content(kids,adults,seniors)
+
+else if (kids == "Kids(0-14)" || adults == "Adults(15-64)" || seniors == "Seniors(65+)")
+                    {   
+                        alert('Select values for kids,adults,seniors');
+                        return false;
+                    }
+
+
+
+  validation
+  
+  if ( selectFrom == selectTo ) 
+                    {  
+                    alert('From and To city cannot be same');
+                    return false;
+                    
+                    } else if(selectfrom == "From City/Airport" || selectto == "To City/Airport") 
+                    {
+                        alert('Please select city');
+                        return false;
+                    } else if(Departing>=Arriving)
+                    {   
+                        alert('Invalid date');
+                        return false;
+                    } else if(Departing<=a) 
+                    {   
+                        alert("Check Departure date,Present or Future dates only allowed!!");
+                        return false;
+                    } else if(Arriving<=a)
+                    {
+                        alert("Check Arriving Date,Present or Future dates only allowed!!");
+                        return false;
+                    }  
+
+
+
+
+
+
+
+
+
+
+Index html without bootstrap
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Index</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" 
+rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+<script type="text/javascript" src="hhhjs/main.js"></script>
+
+
+<style></style>
+</head>
+<body>
+<form name = "frm" onsubmit=" return validate()">
+ <ul>
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="navbar-header"
+        <h1> Let's Go Airline</h1>
+        <img src="mainlogo.jpg" alt="Logo" height="110px" width="130px">
+        <a href="overview.html">Overview</a>
+        <a href="vision.html">Vision</a>
+        <a href="values.html">Values</a>
+    </div> 
+   
+
+    <!--Card-->
+    <div class="card shadow mb-5 bg-white rounded">
+        <!--Card-Body-->
+    <div class="card-body">
+        <!--Card-Title-->
+        <p class="card-title text-center shadow mb-5 rounded">Travel Booking Form</p>
+        <div class="icons text-center">
+            <i class="fa fa-plane fa-2x" aria-hidden="true"></i>
+            <i class="fa fa-taxi fa-2x" aria-hidden="true"></i>
+            <i class="fa fa-train fa-2x" aria-hidden="true"></i> </div>
+        <hr>
+        <p class="searchText"><strong>Search For Flights</strong></p>
+
+        
+        
+          <!--First Row-->
+          
+          <div class = "row">
+              <div id="error"></div>
+               <select name="sf" required>
+                      <option value="" disabled="" selected="">From City/Airport</option>
+                      <option value="1">New Delhi</option>
+                      <option value="2">Mumbai</option>
+                      <option value="3">Bangalore</option>
+                      <option value="4">Kochi</option>
+                </select> 
+               <select  name="st" required>
+                      <option value="" disabled="" selected="">To City/Airport</option>
+                      <option value="1">New Delhi</option>
+                      <option value="2">Mumbai</option>
+                      <option value="3">Bangalore</option>
+                      <option value="4">Kochi</option>
+                </select> 
+          </div>
+          
+          <!--Second Row-->
+          <div class="date">
+              <p>Departing</p>
+
+               <input placeholder="&#xf073; Departing" type="date" name="Departing" 
+                class="form-control datepicker mb-4" style="font-family:Arial, FontAwesome" required > 
+              <p>Returning</p>
+               <input placeholder="&#xf073; Arriving" type="date" name="Arriving" 
+                class="form-control datepicker" style="font-family:Arial, FontAwesome" required> 
+          
+          </div>
+          <div class="row">
+            <select class="browser-default custom-select mb-4" name="kids" required>
+                <option value="" disabled="" selected="">Number of Passengers</option>   
+                <option value="1">1</option>
+                   <option value="2">2</option>
+             </select> 
+         </div>
+          
+            
+          
+        
+      </div>
+    </div>
+   <li><input type="submit" value="SEARCH FLIGHTS"></li>
+    
+</ul>      
+</form> 
+</body>
+</html>
+
+
+
+
+
+
+
+index.html with bootstrap (Without validation)
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Index</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="css/style.css">
+<style></style>
+</head>
+<body>
+<form name = "frm" action="../CPage/page.html"> 
+  <div class="home">
+        <div class="navbar navbar-expand-sm bg-dark navbar-dark " role="navigation">
+            <!-- Brand/logo -->
+              <a class="navbar-brand" href="#">
+                <img src="mainlogo.jpg" alt="logo" style="width:50px;">
+              </a>
+            
+            <!-- Links -->
+              <ul class="nav navbar-nav navbar-right">
+                <span class="navbar-text">
+                <strong>Let's Go Airline</strong> 
+                </span>
+                <li class="nav-item">
+                  <a class="nav-link" href="overview.html">Overview</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="vision.html">Vision</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="values.html">Values</a>
+                </li>
+              </ul>
+          
+        </div> 
+    
+    
+        <div class="card shadow mb-5 bg-white rounded">
+          <!--Card-Body-->
+          <div class="card-body">
+            <!--Card-Title-->
+           <p class="card-title text-center shadow mb-5 rounded">Booking Information</p>
+                  
+          
+            <!--First Row-->          
+            <div class = "row">                
+                  <select name="sf" style="font-family:Arial, FontAwesome" required>
+                        <option value="" disabled="" selected="">From City/Airport</option>
+                        <option value="1">New Delhi</option>
+                        <option value="2">Mumbai</option>
+                        <option value="3">Bangalore</option>
+                        <option value="4">Kochi</option>
+                  </select> 
+                  <hr>
+                  <select  name="st" style="font-family:Arial, FontAwesome" required>
+                        <option value="" disabled="" selected="">To City/Airport</option>
+                        <option value="1">New Delhi</option>
+                        <option value="2">Mumbai</option>
+                        <option value="3">Bangalore</option>
+                        <option value="4">Kochi</option>
+                  </select> 
+            </div>
+            <hr>
+            <!--Second Row-->
+            <div class="row">
+              <div class="date">
+                <p>Departing</p>
+                <input placeholder="&#xf073; Departing" type="date" name="Departing" 
+                  class="form-control datepicker mb-4" style="font-family:Arial, FontAwesome" required > 
+                <p>Returning</p>
+                <input placeholder="&#xf073; Arriving" type="date" name="Arriving" 
+                  class="form-control datepicker" style="font-family:Arial, FontAwesome" required> 
+              </div>
+            </div>  
+            <hr>
+            <div class="row" style="font-family:Arial, FontAwesome">
+              <select class="browser-default custom-select mb-4" name="kids" required>
+                  <option value="" disabled="" selected="">Number of Passengers</option>   
+                  <option value="1">1</option>
+                    <option value="2">2</option>
+              </select> 
+            </div>
+            <input type="submit" value="SEARCH FLIGHTS">
+    </div>
+    
+           
+</form> 
+</body>
+</html>
+
+
+
+
+
+
+main.js file 
+
+
+
+console.log('hello')
+var aa = new Date();
+console.log(aa)
+var pdate = aa.toLocaleDateString();
+console.log(pdate)
+var today = new Date();
+var dd = today.getDate();
+
+var mm = today.getMonth()+1; 
+var yyyy = today.getFullYear();
+if(dd<10) 
+{
+    dd='0'+dd;
+} 
+
+if(mm<10) 
+{
+    mm='0'+mm;
+} 
+
+today = dd+'/'+mm+'/'+yyyy;
+console.log("Today in dd/mm/yyyy format is" + today);
+
+
+                
+   function validate()
+    {   var selectfrom = document.frm.sf.value;
+        var selectto = document.frm.st.value;
+        console.log("Selected city is" + selectfrom,selectto)
+        var kids = document.frm.kids.value;
+        var Departing=document.frm.Departing.value;
+        var Arriving = document.frm.Arriving.value;                           
+        console.log("Departing date is " + Departing )
+        console.log(" Arriving date is" +  Arriving )
+        var selectfrom = document.frm.sf.value;
+        var selectto = document.frm.st.value; 
+        console.log("Passengers is" + kids)
+                if(airportvalidation(selectto,selectfrom))
+                        {
+                            if(datevalidation(Departing,Arriving))
+                            {
+                                console.log("Validation Successful")
+                            }
+                        }
+            
+            
+      return false;
+    } 
+    
+    function airportvalidation(selectto,selectfrom)
+    {   var a = selectto;
+        var b = selectfrom;
+        
+        if ( selectto == selectfrom ) 
+        {  
+            alert('Please check city');
+            return false;
+        }
+        return true;
+    }
+    
+    function datevalidation(Departing,Arriving)
+    {
+        var dd = Departing;
+        var da = Arriving;
+        console.log("Departing date is"+ dd)
+        console.log("Departing date is"+ dd)
+        if(dd >= da) 
+        {
+        alert('Please check date!');
+        return false;
+        } else if (dd < today)
+        {
+            alert("Check Departure date,Present or Future dates only allowed!!");
+            return false;
+        } else if(da < today)
+        {
+            alert("Check Arriving date,Present or Future dates only allowed!!");
+            return false;
+        }
+        else 
+        { return true;
+        }
+    }   
+
+
+
+
+
+
+
+Index.html with working validation
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Index</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+
+<style></style>
+</head>
+<body>
+<form name="frm"  method="post" onsubmit="return validate();">
+ <ul>
+    <div class="topnav">
+        <a href="#"><strong>Let's Go Airline</strong></a>
+        <img src="mainlogo.jpg" alt="Logo" height="110px" width="130px">
+        <li><a href="overview.html">Overview</a></li>
+        <li><a href="vision.html">Vision</a></li>
+        <li><a href="values.html">Values</a></li>
+    </div> 
+   
+
+    <!--Card-->
+    <div class="card shadow mb-5 bg-white rounded">
+        <!--Card-Body-->
+    <div class="card-body">
+        <!--Card-Title-->
+        <p class="card-title text-center shadow mb-5 rounded">Travel Booking Form</p>
+        <div class="icons text-center">
+            <i class="fa fa-plane fa-2x" aria-hidden="true"></i>
+            <i class="fa fa-taxi fa-2x" aria-hidden="true"></i>
+            <i class="fa fa-train fa-2x" aria-hidden="true"></i> </div>
+        <hr>
+        <p class="searchText"><strong>Search For Flights</strong></p>
+
+        
+        <table>
+          <!--First Row-->
+          
+          <div class = "row">
+              <div id="error"></div>
+               <select name="sf" required>
+                      <option value="" disabled="" selected="">From City/Airport</option>
+                      <option value="1">New Delhi</option>
+                      <option value="2">Mumbai</option>
+                      <option value="3">Bangalore</option>
+                      <option value="4">Kochi</option>
+                </select> 
+               <select  name="st" required>
+                      <option value="" disabled="" selected="">To City/Airport</option>
+                      <option value="1">New Delhi</option>
+                      <option value="2">Mumbai</option>
+                      <option value="3">Bangalore</option>
+                      <option value="4">Kochi</option>
+                </select> 
+          </div>
+          
+          <!--Second Row-->
+          <div class="date">
+              <p>Departing</p>
+
+               <input placeholder="&#xf073; Departing" type="date" name="Departing" 
+                class="form-control datepicker mb-4" style="font-family:Arial, FontAwesome" required > 
+              <p>Returning</p>
+               <input placeholder="&#xf073; Arriving" type="date" name="Arriving" 
+                class="form-control datepicker" style="font-family:Arial, FontAwesome" required> 
+          
+          </div>
+          <div class="row">
+            <select class="browser-default custom-select mb-4" name="kids" required>
+                <option value="" disabled="" selected="">Number of Passengers</option>   
+                <option value="1">1</option>
+                   <option value="2">2</option>
+             </select> 
+         </div> 
+          
+            
+          
+        </table>
+      </div>
+    </div>
+    <li><input type="submit" name="submit" value="Find Flights"/></li>
+    
+</ul>      
+</form> 
+</body>
+</html>
+
+
+
+
+
+    
+
+    
+
+
+
+   
+
+    
+    
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+
+
+   
+
+    
+    
+ 
